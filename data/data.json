@@ -1,6 +1,6 @@
 {
   "options": [
-    { "name": "apple", "img": "images/apple.png" },
+    { "name": "apple", "img": "images/apple.jpg" },
     { "name": "banana", "img": "images/banana.png" },
     { "name": "cherry", "img": "images/cherry.png" },
     { "name": "date", "img": "images/date.png" },
