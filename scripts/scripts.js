@@ -36,7 +36,7 @@ fetch('data/data.json')
        
         renderBubbles(options); */
     })
-    .catch(err => console.error('Failed to load options:', err));
+   /* .catch(err => console.error('Failed to load options:', err));*/
 
 function renderFruitOptions(game) {
     const container = document.getElementById('imageContainer');
