@@ -6,7 +6,7 @@ const clickCounterEl = document.getElementById('clickCounter');
 let clicks = 0;
 let options = [];
 
-
+/*
 fetch('data/data.json')
     .then(res => res.json())
     .then(data => {
@@ -75,6 +75,50 @@ function renderBubbles(list) {
         });
         bubblesContainer.appendChild(bubble);
     });
+}
+*/
+
+fetch('data/data.json')
+  .then(res => res.json())
+  .then(data => {
+    const options = data.options || [];
+    // populate classic select
+    options.forEach(opt => {
+      const optionEl = document.createElement('option');
+      optionEl.value = opt.name;
+      optionEl.textContent = opt.name;
+      selectEl.appendChild(optionEl);
+    });
+    // render bubbles with images
+    renderOptions(options);
+  })
+  .catch(err => console.error('Failed to load options:', err));
+
+function renderOptions(optionsList) {
+  bubblesContainer.innerHTML = '';
+  optionsList.forEach(opt => {
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    // image
+    const img = document.createElement('img');
+    img.src = opt.img;
+    img.alt = opt.name;
+    img.width = 40; // small thumb
+    img.height = 'auto';
+    bubble.appendChild(img);
+    // label
+    const label = document.createElement('div');
+    label.textContent = opt.name;
+    label.className = 'bubble-label';
+    bubble.appendChild(label);
+    // click handler...
+    bubble.addEventListener('click', () => {
+      clicks++;
+      clickCounterEl.textContent = `Clicks: ${clicks}`;
+      console.log('Selected:', opt.name);
+    });
+    bubblesContainer.appendChild(bubble);
+  });
 }
 
 
