@@ -1,4 +1,3 @@
-// Références DOM
 const selectEl = document.getElementById('classicSelect');
 const searchInput = document.getElementById('searchInput');
 const bubblesContainer = document.getElementById('bubblesContainer');
@@ -7,24 +6,31 @@ const clickCounterEl = document.getElementById('clickCounter');
 let clicks = 0;
 let options = [];
 
-// Charger le JSON
+
 fetch('data/data.json')
     .then(res => res.json())
     .then(data => {
         options = data.options || [];
-        // Remplir le dropdown classique
+        
         options.forEach(opt => {
             const optionEl = document.createElement('option');
             optionEl.value = opt;
             optionEl.textContent = opt;
             selectEl.appendChild(optionEl);
+            
+            const bubbleImg = document.createElement('img');
+            bubbleImg.src = normalizeUrl(item.img) || 'images/placeholder.png';
+            bubbleImg.alt = item.appName;
+            bubbleImg.style.width = '40px'; 
+            bubbleImg.style.height = 'auto';
+            bubble.appendChild(bubbleImg);
+
         });
-        // Afficher les bubbles
+       
         renderBubbles(options);
     })
     .catch(err => console.error('Failed to load options:', err));
 
-// Fonction pour créer les bubbles
 function renderBubbles(list) {
     bubblesContainer.innerHTML = '';
     list.forEach(opt => {
@@ -40,7 +46,7 @@ function renderBubbles(list) {
     });
 }
 
-// Filtrage dynamique
+
 searchInput.addEventListener('input', (e) => {
     const term = e.target.value.toLowerCase();
     const filtered = options.filter(opt => opt.toLowerCase().includes(term));
