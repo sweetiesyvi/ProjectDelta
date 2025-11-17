@@ -7,7 +7,7 @@
     let clicks = 0;
     let options = [];
 
-    fetch('data/options.json')
+    fetch('data/data.json')
         .then(res => res.json())
         .then(data => {
             options = data.options || [];
@@ -44,4 +44,3 @@
         renderBubbles(filtered);
     });
 })();
-
