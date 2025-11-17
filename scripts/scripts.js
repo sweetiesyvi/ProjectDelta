@@ -11,13 +11,7 @@ fetch('data/data.json')
     .then(res => res.json())
     .then(data => {
 
-        const firstGame = data.gameSort[0]; // ou choisir le jeu que tu veux
-        renderFruitOptions(firstGame);
-
-        
-      /*  options = data.options || [];
-        
-    
+     options = data.options || [];
         
         options.forEach(opt => {
             const optionEl = document.createElement('option');
@@ -34,9 +28,9 @@ fetch('data/data.json')
 
         });
        
-        renderBubbles(options); */
+        renderBubbles(options); 
     })
-   /* .catch(err => console.error('Failed to load options:', err));*/
+  .catch(err => console.error('Failed to load options:', err));
 
 function renderFruitOptions(game) {
     const container = document.getElementById('imageContainer');
