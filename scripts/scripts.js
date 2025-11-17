@@ -78,7 +78,7 @@ function renderBubbles(list) {
 }
 */
 
-fetch('data/data.json')
+/*fetch('data/data.json')
   .then(res => res.json())
   .then(data => {
     const options = data.options || [];
@@ -120,6 +120,34 @@ function renderOptions(optionsList) {
     bubblesContainer.appendChild(bubble);
   });
 }
+*/
+
+fetch("data/data.json")
+  .then(r => r.json())
+  .then(data => {
+    const container = document.getElementById("optionsContainer");
+    container.innerHTML = "";
+
+    data.options.forEach(opt => {
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+
+      // Image
+      const img = document.createElement("img");
+      img.src = opt.img; 
+      img.alt = opt.name;
+      img.classList.add("bubble-img");
+
+      // Text
+      const label = document.createElement("span");
+      label.textContent = opt.name;
+
+      bubble.appendChild(img);
+      bubble.appendChild(label);
+      container.appendChild(bubble);
+    });
+  })
+  .catch(err => console.error("JSON load error:", err));
 
 
 searchInput.addEventListener('input', (e) => {
