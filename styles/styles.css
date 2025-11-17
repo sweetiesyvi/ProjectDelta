@@ -7,13 +7,13 @@ h1, h2 {
     color: #333;
 }
 
-#bubblesContainer {
+/* #bubblesContainer {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
-
+*/
 /*.bubble {
     padding: 5px 10px;  
     font-size: 14px;    
@@ -23,6 +23,9 @@ h1, h2 {
     cursor: pointer;
 }
 */
+.bubble-container {
+  pointer-events: auto;
+}
 
 .bubble:hover {
     background-color: #0056b3;
