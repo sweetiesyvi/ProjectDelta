@@ -10,7 +10,14 @@ let options = [];
 fetch('data/data.json')
     .then(res => res.json())
     .then(data => {
-        options = data.options || [];
+
+        const firstGame = data.gameSort[0]; // ou choisir le jeu que tu veux
+        renderFruitOptions(firstGame);
+
+        
+      /*  options = data.options || [];
+        
+    
         
         options.forEach(opt => {
             const optionEl = document.createElement('option');
@@ -27,9 +34,39 @@ fetch('data/data.json')
 
         });
        
-        renderBubbles(options);
+        renderBubbles(options); */
     })
     .catch(err => console.error('Failed to load options:', err));
+
+function renderFruitOptions(game) {
+    const container = document.getElementById('imageContainer');
+    container.innerHTML = ''; // vider l'ancien contenu
+
+    if (!game.options) return;
+
+    game.options.forEach(option => {
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.textContent = option.name;
+
+        // Image cachée
+        const img = document.createElement('img');
+        img.src = option.img;
+        img.alt = option.name;
+        img.style.width = '150px';
+        img.style.height = 'auto';
+        img.style.display = 'none'; // cachée au départ
+
+        // Affiche l'image au clic
+        bubble.addEventListener('click', () => {
+            img.style.display = 'block';
+        });
+
+        bubble.appendChild(img);
+        container.appendChild(bubble);
+    });
+}
+
 
 function renderBubbles(list) {
     bubblesContainer.innerHTML = '';
