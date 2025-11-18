@@ -16,13 +16,16 @@
     <section>
         <h2>Before (Classic Dropdown)</h2>
         <select id="classicSelect">
-           <option value="">Select a fruit...</option>
+            <label for="classicSelect">Choose a fruit:</label>
+            <option value="">Select a fruit...</option>
         </select>
+
         <p>Try to select "Strawberry" quickly!</p>
     </section>
 
     <section>
         <h2>After (Improved Bubble UX)</h2>
+        <label for="searchInput" class="sr-only">Search fruits:</label>
         <input type="text" id="searchInput" placeholder="Type to search...">
         <div id="optionsContainer"></div>
         <div id="bubblesContainer"></div>
@@ -35,7 +38,9 @@
     </section>
 
     <footer>
-        <p>Prototype by Your Name | <a href="#">GitHub Repo</a></p>
+        <p>Prototype by Sweetiesyvi | <a href="#">GitHub Repo</a> | 
+         <a href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fsweetiesyvi.github.io%2FProjectDelta%2F">Validity</a> 
+        | <a href="#">GitHub Repo</a></p>
     </footer>
     <script src="scripts/scripts.js"></script>
 </body>
