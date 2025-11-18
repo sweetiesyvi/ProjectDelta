@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 imageDisplay.src = opt.img;
                 imageDisplay.style.display = "block";
+            });
 
             bubblesContainer.appendChild(bubble);
         });
@@ -90,6 +91,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
         imageDisplay.src = selected.img;
         imageDisplay.style.display = 'block';
-        
     });
 });
