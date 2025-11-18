@@ -49,7 +49,7 @@ function renderBubbles(list) {
 
         const label = document.createElement("span");
         label.textContent = opt.name;
-        label.className = 'bubble-label';
+       
         bubble.appendChild(img);
         bubble.appendChild(label);
         const searchInput = document.getElementById("searchInput");
