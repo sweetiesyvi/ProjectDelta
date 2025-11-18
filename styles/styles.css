@@ -1,13 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
+    body {
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 20px;
-    background: #f5f5f5;
     color: #333;
+
+    background-color: #f5f5f5;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #e0e0e0,
+        #e0e0e0 10px,
+        #f5f5f5 10px,
+        #f5f5f5 20px
+    );
+}
+
 }
 
 
 h1, h2 {
-    color: #007bff;
+    font-weight: 700;
+    letter-spacing: 1px;       /* espacement entre lettres */
+    text-transform: uppercase; /* optionnel, met en majuscules */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 #bubblesContainer {
@@ -80,6 +94,9 @@ h1, h2 {
    COUNTER
 --------------------------------*/
 #clickCounter {
-    font-weight: bold;
-    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #ff6b6b;          /* couleur flashy */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
