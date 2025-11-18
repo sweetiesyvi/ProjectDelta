@@ -77,7 +77,9 @@ selectEl.addEventListener("change", () => {
 
     clicks++;
     clickCounterEl.textContent = `Clicks: ${clicks}`;
-    showImage(selected.img, selected.name);
+    imageDisplay.src = selected.img;
+    imageDisplay.alt = selected.name;
+    imageDisplay.style.display = 'block';
 
 });
 });
