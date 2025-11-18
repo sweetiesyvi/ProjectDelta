@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 const selectEl = document.getElementById("classicSelect");
 const bubblesContainer = document.getElementById("bubblesContainer");
 const clickCounterEl = document.getElementById("clickCounter");
@@ -77,4 +78,5 @@ selectEl.addEventListener("change", () => {
 
     imageDisplay.src = selected.img;
     imageDisplay.alt = selected.name;
+});
 });
