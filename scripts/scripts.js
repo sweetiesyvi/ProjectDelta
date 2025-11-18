@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 clickCounterEl.textContent = `Clicks: ${clicks}`;
 
                 imageDisplay.src = opt.img;
-                imageDisplay.style.display = "block";
+                imageDisplay.alt = opt.name;
+               /* imageDisplay.style.display = "block";*/
                 imageDisplay.classList.remove("show");
                 setTimeout(() => {
                     imageDisplay.classList.add("show");
@@ -94,6 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
         clickCounterEl.textContent = `Clicks: ${clicks}`;
 
         imageDisplay.src = selected.img;
-        imageDisplay.style.display = 'block';
+        imageDisplay.alt = selected.name;
+        /*imageDisplay.style.display = 'block';*/
+        imageDisplay.classList.remove("show"); 
+        setTimeout(() => {
+            imageDisplay.classList.add("show");
+    }, 50);
     });
 });
