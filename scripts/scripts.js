@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const img = document.createElement("img");
             img.src = opt.img;
-            img.alt = opt.name;
+            img.alt = "";
             img.classList.add("bubble-img");
 
             const label = document.createElement("span");
