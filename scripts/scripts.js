@@ -86,4 +86,4 @@ selectEl.addEventListener("change", () => {
     imageDisplay.style.display = 'block';
 
 }
-}
+});
