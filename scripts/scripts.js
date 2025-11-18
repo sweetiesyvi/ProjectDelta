@@ -73,19 +73,11 @@ function renderBubbles(list) {
 // ----------------------
 selectEl.addEventListener("change", () => {
     const selected = options.find(o => o.name === selectEl.value);
-    if (!selected) {
-        imageDisplay.style.display = 'none';
-        imageDisplay.src = '';
-        imageDisplay.alt = '';
-        return;
-    }
+    if (!selected) return;
 
     clicks++;
     clickCounterEl.textContent = `Clicks: ${clicks}`;
-
-    imageDisplay.src = selected.img;
-    imageDisplay.alt = selected.name;
-    imageDisplay.style.display = 'block';
+    showImage(selected.img, selected.name);
 
 });
 });
