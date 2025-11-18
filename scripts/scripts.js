@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("JSON load error:", err));
 
     // ----------------------
-    // 2. Fonction pour afficher les bulles
+    // 2. Afficher bulles
     // ----------------------
     function renderBubbles(list) {
         bubblesContainer.innerHTML = "";
@@ -50,13 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
             bubble.appendChild(img);
             bubble.appendChild(label);
 
-            // clic sur la bulle
             bubble.addEventListener("click", () => {
                 clicks++;
                 clickCounterEl.textContent = `Clicks: ${clicks}`;
 
                 imageDisplay.src = opt.img;
                 imageDisplay.style.display = "block";
+
+                // fade-in
+                imageDisplay.classList.remove("show");
+                setTimeout(() => imageDisplay.classList.add("show"), 10);
             });
 
             bubblesContainer.appendChild(bubble);
@@ -64,14 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ----------------------
-    // 3. Recherche en direct
+    // 3. Recherche
     // ----------------------
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         let filtered = options;
 
         if (query !== "") {
-            filtered = options.filter(opt => 
+            filtered = options.filter(opt =>
                 opt.name.toLowerCase().includes(query)
             );
         }
@@ -80,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ----------------------
-    // 4. Sélection dans la liste déroulante
+    // 4. Dropdown
     // ----------------------
     selectEl.addEventListener("change", () => {
         const selected = options.find(o => o.name === selectEl.value);
@@ -91,5 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         imageDisplay.src = selected.img;
         imageDisplay.style.display = 'block';
+
+        // fade-in
+        imageDisplay.classList.remove("show");
+        setTimeout(() => imageDisplay.classList.add("show"), 10);
     });
 });
+
