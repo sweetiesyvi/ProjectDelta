@@ -47,7 +47,7 @@ function renderBubbles(list) {
         img.alt = opt.name;
         img.classList.add("bubble-img");
 
-        const label = document.createElement("div");
+        const label = document.createElement("span");
         label.textContent = opt.name;
         label.className = 'bubble-label';
         bubble.appendChild(img);
