@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let clicks = 0;
     let options = [];
 
-    // ----------------------
-    // 1. Charger le JSON
-    // ----------------------
     fetch("data/data.json")
         .then(res => res.json())
         .then(data => {
@@ -29,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("JSON load error:", err));
 
-    // ----------------------
-    // 2. Fonction pour afficher les bulles
-    // ----------------------
+   
     function renderBubbles(list) {
         bubblesContainer.innerHTML = "";
 
@@ -63,9 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ----------------------
-    // 3. Recherche en direct
-    // ----------------------
+
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         let filtered = options;
@@ -79,9 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderBubbles(filtered);
     });
 
-    // ----------------------
-    // 4. Sélection dans la liste déroulante
-    // ----------------------
     selectEl.addEventListener("change", () => {
         const selected = options.find(o => o.name === selectEl.value);
         if (!selected) return;
