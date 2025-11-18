@@ -41,7 +41,7 @@ function renderBubbles(list) {
     list.forEach(opt => {
         const bubble = document.createElement("div");
         bubble.className = "bubble";
-
+        bubble.textContent = opt;
         const img = document.createElement("img");
         img.src = opt.img;
         img.alt = opt.name;
