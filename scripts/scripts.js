@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-const selectEl = document.getElementById("classicSelect");
-const imageDisplay = document.getElementById("displayImage");
-const clickCounterEl = document.getElementById("clickCounter");
-const bubblesContainer = document.getElementById("bubblesContainer");
+    const selectEl = document.getElementById("classicSelect");
+    const bubblesContainer = document.getElementById("bubblesContainer");
+    const imageDisplay = document.getElementById("displayImage");
+    const clickCounterEl = document.getElementById("clickCounter");
+    
 
 
 
-let clicks = 0;
-let options = [];
+    let clicks = 0;
+    let options = [];
 
 // ----------------------
 // 1. Charger le JSON
@@ -77,7 +78,7 @@ function renderBubbles(list) {
 
             // afficher l’image sélectionnée
             imageDisplay.src = opt.img;
-            /*imageDisplay.alt = opt.name; */
+            imageDisplay.alt = opt.name; 
             imageDisplay.style.display = "block";
         });
 
@@ -96,7 +97,7 @@ selectEl.addEventListener("change", () => {
     clickCounterEl.textContent = `Clicks: ${clicks}`;
     
     imageDisplay.src = selected.img;
-   /* imageDisplay.alt = selected.name; */
+    imageDisplay.alt = selected.name;
     imageDisplay.style.display = 'block';
 
     });
