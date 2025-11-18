@@ -1,103 +1,103 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const selectEl = document.getElementById("classicSelect");
-    const imageDisplay = document.getElementById("displayImage");
-    const clickCounterEl = document.getElementById("clickCounter");
-    const bubblesContainer = document.getElementById("bubblesContainer");
-    const searchInput = document.getElementById("searchInput");
+const selectEl = document.getElementById("classicSelect");
+const imageDisplay = document.getElementById("displayImage");
+const clickCounterEl = document.getElementById("clickCounter");
+const bubblesContainer = document.getElementById("bubblesContainer");
 
-    let clicks = 0;
-    let options = [];
 
-    // ----------------------
-    // 1. Charger le JSON
-    // ----------------------
-    fetch("data/data.json")
-        .then(res => res.json())
-        .then(data => {
-            options = data.options;
 
-            // remplir la liste déroulante
-            options.forEach(opt => {
-                const optionEl = document.createElement("option");
-                optionEl.value = opt.name;
-                optionEl.textContent = opt.name;
-                selectEl.appendChild(optionEl);
-            });
+let clicks = 0;
+let options = [];
 
-            // afficher toutes les bulles
-            renderBubbles(options);
-        })
-        .catch(err => console.error("JSON load error:", err));
+// ----------------------
+// 1. Charger le JSON
+// ----------------------
+fetch("data/data.json")
+    .then(res => res.json())
+    .then(data => {
 
-    // ----------------------
-    // 2. Afficher bulles
-    // ----------------------
-    function renderBubbles(list) {
-        bubblesContainer.innerHTML = "";
+        options = data.options;
 
-        list.forEach(opt => {
-            const bubble = document.createElement("div");
-            bubble.className = "bubble";
-
-            const img = document.createElement("img");
-            img.src = opt.img;
-            img.alt = opt.name;
-            img.classList.add("bubble-img");
-
-            const label = document.createElement("span");
-            label.textContent = opt.name;
-
-            bubble.appendChild(img);
-            bubble.appendChild(label);
-
-            bubble.addEventListener("click", () => {
-                clicks++;
-                clickCounterEl.textContent = `Clicks: ${clicks}`;
-
-                imageDisplay.src = opt.img;
-                imageDisplay.style.display = "block";
-
-                // fade-in
-                imageDisplay.classList.remove("show");
-                setTimeout(() => imageDisplay.classList.add("show"), 10);
-            });
-
-            bubblesContainer.appendChild(bubble);
+        // remplir la liste déroulante
+        options.forEach(opt => {
+            const optionEl = document.createElement("option");
+            optionEl.value = opt.name;
+            optionEl.textContent = opt.name;
+            selectEl.appendChild(optionEl);
         });
-    }
 
-    // ----------------------
-    // 3. Recherche
-    // ----------------------
-    searchInput.addEventListener("input", () => {
+        // afficher les bulles
+        renderBubbles(options);
+    })
+    .catch(err => console.error("JSON load error:", err));
+
+
+// ----------------------
+// 2. Fonction pour afficher les bulles
+// ----------------------
+function renderBubbles(list) {
+    bubblesContainer.innerHTML = "";
+
+    list.forEach(opt => {
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        
+        const img = document.createElement("img");
+        img.src = opt.img;
+        img.alt = opt.name;
+        img.classList.add("bubble-img");
+
+        const label = document.createElement("span");
+        label.textContent = opt.name;
+       
+        bubble.appendChild(img);
+        bubble.appendChild(label);
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         let filtered = options;
 
         if (query !== "") {
-            filtered = options.filter(opt =>
+            filtered = options.filter(opt => 
                 opt.name.toLowerCase().includes(query)
             );
         }
 
-        renderBubbles(filtered);
-    });
-
-    // ----------------------
-    // 4. Dropdown
-    // ----------------------
-    selectEl.addEventListener("change", () => {
-        const selected = options.find(o => o.name === selectEl.value);
-        if (!selected) return;
-
-        clicks++;
-        clickCounterEl.textContent = `Clicks: ${clicks}`;
-
-        imageDisplay.src = selected.img;
-        imageDisplay.style.display = 'block';
-
-        // fade-in
-        imageDisplay.classList.remove("show");
-        setTimeout(() => imageDisplay.classList.add("show"), 10);
-    });
+    renderBubbles(filtered);
 });
 
+});
+
+
+        // clic sur la bulle
+        bubble.addEventListener("click", () => {
+            clicks++;
+            clickCounterEl.textContent = `Clicks: ${clicks}`;
+
+            // afficher l’image sélectionnée
+            imageDisplay.src = opt.img;
+            /*imageDisplay.alt = opt.name; */
+            imageDisplay.style.display = "block";
+        });
+
+        bubblesContainer.appendChild(bubble);
+    });
+
+
+// ----------------------
+// 3. Sélection dans la liste déroulante
+// ----------------------
+selectEl.addEventListener("change", () => {
+    const selected = options.find(o => o.name === selectEl.value);
+    if (!selected) return;
+
+    clicks++;
+    clickCounterEl.textContent = `Clicks: ${clicks}`;
+    
+    imageDisplay.src = selected.img;
+   /* imageDisplay.alt = selected.name; */
+    imageDisplay.style.display = 'block';
+
+    });
+});
