@@ -78,25 +78,25 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
   
 - **File Structure:** 
 
-**ProjectDelta/**
+      **ProjectDelta/**
 
-**├─ index.html**
+      **├─ index.html**
 
-**├─ styles/**
+      **├─ styles/**
 
-**│ └─ styles.css**
+      **│ └─ styles.css**
 
-**├─ scripts/88**
+      **├─ scripts/88**
 
-**│ └─ scripts.js**
+      **│ └─ scripts.js**
 
-**├─ data/**
+      **├─ data/**
 
-**│ └─ data.json**
+      **│ └─ data.json**
 
-**├─ images/**
+      **├─ images/**
 
-**└─ README.md**
+      **└─ README.md**
 
 
 ## Attribution
