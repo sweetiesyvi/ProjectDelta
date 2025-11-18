@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 const selectEl = document.getElementById("classicSelect");
-const bubblesContainer = document.getElementById("bubblesContainer");
-const clickCounterEl = document.getElementById("clickCounter");
 const imageDisplay = document.getElementById("imageDisplay");
+const clickCounterEl = document.getElementById("clickCounter");
+const bubblesContainer = document.getElementById("bubblesContainer");
+
+
 
 let clicks = 0;
 let options = [];
@@ -85,5 +87,5 @@ selectEl.addEventListener("change", () => {
     imageDisplay.alt = selected.name;
     imageDisplay.style.display = 'block';
 
-}
+});
 });
