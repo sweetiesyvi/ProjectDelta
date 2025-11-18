@@ -1,82 +1,50 @@
+/* Corps de page */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5; /* léger gris de fond */
     color: #333;
-
-    background-image: url('../images/pattern.png');
-    background-repeat: repeat;
-    background-size: 50px 50px;
 }
 
+/* Header */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Titres */
 h1, h2 {
-    color: #007bff;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin: 10px 0;
 }
 
-/* Bulles */
-#bubblesContainer {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    pointer-events: auto
-}
-
-.bubble {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    border-radius: 10px;
-    background: #fefefe;
-    border: 1px solid #ccc;
-    width: 110px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.bubble:hover {
-    background-color: #0056b3;
-    transform: scale(1.07);
-}
-
-.bubble-img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-/* Image principale */
-#displayImage {
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-    display: block;
+/* Sections */
+section {
     margin: 20px auto;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    padding: 20px;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Input */
+/* Input de recherche */
 #searchInput {
-    padding: 8px;
+    padding: 10px;
     width: 100%;
     max-width: 300px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 /* Compteur */
 #clickCounter {
+    margin-top: 20px;
     font-weight: bold;
-    color: #ff6b6b;
-    margin-top: 10px;
     font-size: 18px;
+    text-align: center;
 }
