@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 const selectEl = document.getElementById("classicSelect");
-const imageDisplay = document.getElementById("imageDisplay");
+const imageDisplay = document.getElementById("displayImage");
 const clickCounterEl = document.getElementById("clickCounter");
 const bubblesContainer = document.getElementById("bubblesContainer");
 
@@ -60,7 +60,8 @@ function renderBubbles(list) {
 
             // afficher l’image sélectionnée
             imageDisplay.src = opt.img;
-            imageDisplay.alt = opt.name;
+            /*imageDisplay.alt = opt.name; */
+            imageDisplay.style.display = "block";
         });
 
         bubblesContainer.appendChild(bubble);
@@ -77,9 +78,10 @@ selectEl.addEventListener("change", () => {
 
     clicks++;
     clickCounterEl.textContent = `Clicks: ${clicks}`;
+    
     imageDisplay.src = selected.img;
-    imageDisplay.alt = selected.name;
+   /* imageDisplay.alt = selected.name; */
     imageDisplay.style.display = 'block';
 
-});
+    });
 });
