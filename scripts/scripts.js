@@ -41,7 +41,7 @@ function renderBubbles(list) {
     list.forEach(opt => {
         const bubble = document.createElement("div");
         bubble.className = "bubble";
-        bubble.textContent = opt;
+        
         const img = document.createElement("img");
         img.src = opt.img;
         img.alt = opt.name;
@@ -52,6 +52,20 @@ function renderBubbles(list) {
 
         bubble.appendChild(img);
         bubble.appendChild(label);
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+
+    // filtre les options
+        const filtered = options.filter(opt => 
+        opt.name.toLowerCase().includes(query)
+    );
+
+    // ré-affiche les bulles filtrées
+    renderBubbles(filtered);
+});
+
 
         // clic sur la bulle
         bubble.addEventListener("click", () => {
