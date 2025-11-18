@@ -3,9 +3,9 @@ body {
     margin: 20px;
     color: #333;
 
-     background: linear-gradient(135deg, #f5f5f5 25%, #e0e0e0 25%, #e0e0e0 50%, #f5f5f5 50%, #f5f5f5 75%, #e0e0e0 75%, #e0e0e0 100%);
-    background-size: 40px 40px;
-
+     background-image: url('images/pattern.png'); /* ton image de fond */
+    background-repeat: repeat;   /* répète le motif */
+    background-size: 50px 50px;  /* taille du motif */
 }
 
 
@@ -83,9 +83,7 @@ h1, h2 {
     outline: none;
 }
 
-/* ------------------------------
-   COUNTER
---------------------------------*/
+
 #clickCounter {
     font-weight: 600;
     font-size: 18px;
