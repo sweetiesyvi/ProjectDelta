@@ -1,6 +1,18 @@
-body {
+/*body {
     font-family: Arial, sans-serif;
     margin: 20px;
+}
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/back.png'); /* chemin vers ton image */
+    background-size: cover;       /* l’image remplit tout l’écran */
+    background-position: center;  /* centrée */
+    background-repeat: no-repeat; /* pas de répétition */
+    background-attachment: fixed; /* fixe l’image même en scrollant */
+    color: #fff;                  /* texte clair si ton background est sombre */
 }
 
 h1, h2 {
