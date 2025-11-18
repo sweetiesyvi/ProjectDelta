@@ -78,5 +78,7 @@ selectEl.addEventListener("change", () => {
 
     imageDisplay.src = selected.img;
     imageDisplay.alt = selected.name;
+    imageDisplay.style.display = 'block';
+
 });
 });
