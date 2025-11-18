@@ -107,7 +107,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
   
 - **Code sources:** W3C references, Internet tutorials
   
-- **AI Assistance:** GPT-5 Mini used for code optimization, debugging, and accessibility fixes  
+- **AI Assistance:** GPT-5 Mini, gemini used for code optimization, debugging, and accessibility fixes  
 
 
 ## Code Highlights 📢📢📢📢📢📢📢📢
