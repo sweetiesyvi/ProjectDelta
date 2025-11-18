@@ -1,14 +1,14 @@
-# ProjectDelta
+# 😎😎ProjectDelta💎💎
 
 
 ## Team
 ### name:
-**Sweetiesyvi** 
+**Sweetiesyvi** 🥳🥳🥳
 ### Dev profile
-**https://github.com/sweetiesyvi**
+**https://github.com/sweetiesyvi**🤓🤓
 
 
-## User Story
+## User Story👩‍💻👩‍💻
 
 **As a user interacting with a digital interface**,  
 
@@ -17,7 +17,7 @@
 **so that I can complete tasks faster and with fewer clicks.**
 
 
-## Narrative
+## Narrative 👁👁
 
 Many digital interfaces—from scrolling wheels to tiny dropdowns—have small UX 
 inefficiencies that add up.  
@@ -27,10 +27,10 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 
 ## Short Tagline
 
-**Pick a fruit faster with fewer clicks!**
+**Pick a fruit faster with fewer clicks!** 🍓🥭🍎
 
 
-## Test Case
+## Test Case 👩‍🔬👩‍🔬👩‍🔬
 
 **Scenario:** User wants to select “Strawberry”.  
 
@@ -43,7 +43,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 3. Click the Strawberry bubble.
 
 
-**Expected Result:**  
+**Expected Result:** 📃📃📃📃
 
 - Strawberry is displayed in the main image area.
 
@@ -52,7 +52,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 - All other UI elements remain functional.
 
 
-**Metric for Success:**  
+**Metric for Success:**  📜📜📜📜
 - Fewer clicks compared to a traditional interface
   
 - Faster recognition and selection of items
@@ -60,14 +60,14 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 - No cut-off menus or missing visual cues
 
 
-## Validation Links
+## Validation Links ✅✅✅✅✅✅✅✅✅
 
 - [NU Validator](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fsweetiesyvi.github.io%2FProjectDelta%2F)
  
 - [WAVE Accessibility Report](https://wave.webaim.org/report#/https://sweetiesyvi.github.io/ProjectDelta/)
 
 
-## Infrastructure & Architecture
+## Infrastructure & Architecture 💥💥💥💥💥
 
 
 ### Tech Stack
@@ -101,7 +101,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
       **└─ README.md**
 
 
-## Attribution
+## Attribution 🤝🤝🤝🤝🤝
 
 - **Author:** Sweetiesyvi
   
@@ -110,7 +110,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 - **AI Assistance:** GPT-5 Mini used for code optimization, debugging, and accessibility fixes  
 
 
-## Code Highlights
+## Code Highlights 📢📢📢📢📢📢📢📢
 
 - Dynamic rendering of dropdown options and bubble elements
   
@@ -123,7 +123,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 - Fully accessible and screen reader-friendly
 
 
-## App Overview
+## App Overview 🤙🤙🤙🤙
 
 - **Before:** Classic dropdown only, no visual feedback
    
@@ -134,7 +134,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 - **Functionality:** Clicking a bubble or selecting from dropdown updates the main image
 
 
-## Debug
+## Debug 👾👾👾👾👾
 
 - All console errors resolved
   
@@ -143,7 +143,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 - Image alt attributes updated for accessibility  
 
 
-## Bonus Features
+## Bonus Features 💯💯💯💯
 
 - **Text-based app:** Search terms turned into interactive bubbles
     
