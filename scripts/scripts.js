@@ -56,13 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 clickCounterEl.textContent = `Clicks: ${clicks}`;
 
                 imageDisplay.src = opt.img;
-                imageDisplay.alt = opt.name;
-               /* imageDisplay.style.display = "block";*/
-                imageDisplay.classList.remove("show");
-                setTimeout(() => {
-                    imageDisplay.classList.add("show");
-                }, 50);
-            });
+                imageDisplay.style.display = "block";
 
             bubblesContainer.appendChild(bubble);
         });
@@ -95,11 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clickCounterEl.textContent = `Clicks: ${clicks}`;
 
         imageDisplay.src = selected.img;
-        imageDisplay.alt = selected.name;
-        /*imageDisplay.style.display = 'block';*/
-        imageDisplay.classList.remove("show"); 
-        setTimeout(() => {
-            imageDisplay.classList.add("show");
-    }, 50);
+        imageDisplay.style.display = 'block';
+        
     });
 });
