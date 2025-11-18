@@ -2,8 +2,10 @@
 
 
 ## Team
-
-**Sweetiesyvi** https://github.com/sweetiesyvi
+### name:
+**Sweetiesyvi** 
+### Dev profile
+**https://github.com/sweetiesyvi**
 
 
 ## User Story
@@ -72,7 +74,7 @@ Users can now select fruits via a classic dropdown or an improved bubble interfa
 
 - **Languages:** HTML, CSS, JavaScript (ES6)
   
-- **Libraries/Frameworks:**  FontAwesome for icons
+- **Libraries/Frameworks:**  None(new term learned: vanilla js, that means I made a pure js code without extern library or framework), it was optional but I use the FontAwesome for icons
    
 - **Deployment:** GitHub Pages
   
