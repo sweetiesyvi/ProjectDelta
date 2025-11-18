@@ -54,16 +54,20 @@ function renderBubbles(list) {
         bubble.appendChild(label);
         const searchInput = document.getElementById("searchInput");
 
-        searchInput.addEventListener("input", () => {
-        const query = searchInput.value.toLowerCase();
+       searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
 
-    // filtre les options
-        const filtered = options.filter(opt => 
-        opt.name.toLowerCase().includes(query)
-    );
+    let filtered = options;
 
-    // ré-affiche les bulles filtrées
+    if (query !== "") {
+        filtered = options.filter(opt => 
+            opt.name.toLowerCase().includes(query)
+        );
+    }
+
     renderBubbles(filtered);
+});
+
 });
 
 
