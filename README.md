@@ -5,7 +5,7 @@
 ### name:
 **Sweetiesyvi** 🥳🥳🥳
 ### Dev profile
-**https://github.com/sweetiesyvi**🤓🤓
+**https://github.com/sweetiesyvi** 🤓🤓
 
 
 ## User Story👩‍💻👩‍💻
